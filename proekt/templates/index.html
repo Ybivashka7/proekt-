@@ -1,0 +1,21 @@
+{{define "index"}}
+{{template "header"}}
+
+<main class="container mt-5">
+    <h1>Главная страница</h1>
+    {{range .}}
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">{{.Title}}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{.Anons}}</h6>
+                <p class="card-text">{{.FullText}}</p> 
+            </div>
+        </div>
+    {{else}}
+        <p>Нет постов для отображения.</p>
+    {{end}}
+    <a href="/create" class="btn btn-primary">Добавить пост</a>
+</main>
+
+{{template "footer"}}
+{{end}}

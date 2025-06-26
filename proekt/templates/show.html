@@ -1,0 +1,12 @@
+{{define "show"}}
+  {{template "header"}}
+
+  <h1>{{.Title}}</h1>
+  <p><em>{{.Anons}}</em></p>
+  <p>{{.FullText}}</p>
+
+  <a href="/" class="btn btn-secondary mt-3">На главную</a>
+
+  {{template "footer"}}
+{{end}}
+go
